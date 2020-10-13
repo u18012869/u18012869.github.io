@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html><head>
+   <title>Enter the help project title here</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="robots" content="noindex,follow" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ 
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="default.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { font-size: 1em }
+       .heading1 { color: #000; text-decoration: none; }
+       .heading2 { color: #000; text-decoration: none; }
+       .heading3 { color: #000; text-decoration: none; }
+       .heading4 { color: #000; text-decoration: none; }
+       .heading5 { color: #000; text-decoration: none; }
+       .heading6 { color: #000; text-decoration: none; }
+
+       .hilight1 { color: #FFFFFF; background: #2C5D88; text-decoration: none; }
+       .hilight2 { color: #FFFFFF; background: #2C5D88; text-decoration: none; }
+       .hilight3 { color: #FFFFFF; background: #2C5D88; text-decoration: none; }
+       .hilight4 { color: #FFFFFF; background: #2C5D88; text-decoration: none; }
+       .hilight5 { color: #FFFFFF; background: #2C5D88; text-decoration: none; }
+       .hilight6 { color: #FFFFFF; background: #2C5D88; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { margin-top:2px; margin-left:0; padding:1px }
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+   	   var hiTest = /^hilight/im,
+			parentScope = (parent.hmNavigationFrame);
+		if (parentScope) parent.currentNav("toc");
+		$("a[class^='heading']").on("click",function(event){
+			var doSwipe = (hiTest.test($(this).children("span").first().attr("class")) || false || (parentScope && !parent.hmBrowser.nonDeskTouch));
+			if (doSwipe && parentScope) {
+			window.parent.showNav("toggle");
+			}
+			});
+     });
+   </script>
+      <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="toc52908662.html" target="hmcontent"><span class="heading1" id="s1" ondblclick="return dblclicked(this)">INTRODUCTION</span></a>
+<ul id="ul1" style="list-style-type:none">
+<li class="heading2" id="i1.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a1.1" href="toc52908660.html" target="hmcontent"><span class="heading2" id="s1.1">TABLE OF CONTENTS</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i2" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="toc52908668.html" target="hmcontent"><span class="heading1" id="s2" ondblclick="return dblclicked(this)">HOW TO GET HELP</span></a>
+<ul id="ul2" style="list-style-type:none">
+<li class="heading2" id="i2.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a2.1" href="toc52908669.html" target="hmcontent"><span class="heading2" id="s2.1">3.1 INTRODUCTION</span></a>
+</li>
+<li class="heading2" id="i2.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a2.2" href="toc52908670.html" target="hmcontent"><span class="heading2" id="s2.2">3.3 HELP</span></a>
+</li>
+<li class="heading2" id="i2.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a2.3" href="toc52908671.html" target="hmcontent"><span class="heading2" id="s2.3">3.3 CONCLUSION</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i3" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="toc52908672.html" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">CONTACT DETAILS</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="toc52908673.html" target="hmcontent"><span class="heading2" id="s3.1">4.1 INTRODUCTION</span></a>
+</li>
+<li class="heading2" id="i3.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="toc52908674.html" target="hmcontent"><span class="heading2" id="s3.2">4.2 DETAILS</span></a>
+</li>
+<li class="heading2" id="i3.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a3.3" href="toc52908675.html" target="hmcontent"><span class="heading2" id="s3.3">4.2 CONCLUSION</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="toc52908676.html" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">THE SYSTEM</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="toc52908677.html" target="hmcontent"><span class="heading2" id="s4.1">5.1 INTRODUCTION</span></a>
+</li>
+<li class="heading2" id="i4.2" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="toc52908678.html" target="hmcontent"><span class="heading2" id="s4.2" ondblclick="return dblclicked(this)">MUTAL SCREENS FOR USERS</span></a>
+<ul id="ul4.2" style="list-style-type:none">
+<li class="heading3" id="i4.2.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.1" href="login.html" target="hmcontent"><span class="heading3" id="s4.2.1">LOGIN</span></a>
+</li>
+<li class="heading3" id="i4.2.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.2" href="logout.html" target="hmcontent"><span class="heading3" id="s4.2.2">LOGOUT</span></a>
+</li>
+<li class="heading3" id="i4.2.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.3" href="changepassword.html" target="hmcontent"><span class="heading3" id="s4.2.3">CHANGE PASSWORD</span></a>
+</li>
+<li class="heading3" id="i4.2.4" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.4" href="resetpassword.html" target="hmcontent"><span class="heading3" id="s4.2.4">RESET PASSWORD</span></a>
+</li>
+<li class="heading3" id="i4.2.5" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.5" href="toc52908679.html" target="hmcontent"><span class="heading3" id="s4.2.5">VIEW CALENDAR</span></a>
+</li>
+<li class="heading3" id="i4.2.6" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.6" href="viewnotice.html" target="hmcontent"><span class="heading3" id="s4.2.6">VIEW NOTICE</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.3" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="toc52908680.html" target="hmcontent"><span class="heading2" id="s4.3" ondblclick="return dblclicked(this)">ADMIN SECTION</span></a>
+<ul id="ul4.3" style="list-style-type:none">
+<li class="heading3" id="i4.3.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.1" href="toc52908681.html" target="hmcontent"><span class="heading3" id="s4.3.1">ADD EVENT TO CALENDAR</span></a>
+</li>
+<li class="heading3" id="i4.3.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.2" href="toc52908682.html" target="hmcontent"><span class="heading3" id="s4.3.2">UPDATE EVENT ON CALENDAR</span></a>
+</li>
+<li class="heading3" id="i4.3.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.3" href="deleteeventfromcalendar.html" target="hmcontent"><span class="heading3" id="s4.3.3">DELETE EVENT FROM CALENDAR</span></a>
+</li>
+<li class="heading3" id="i4.3.4" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.4" href="addnotice.html" target="hmcontent"><span class="heading3" id="s4.3.4">ADD NOTICE</span></a>
+</li>
+<li class="heading3" id="i4.3.5" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.5" href="deletenotice.html" target="hmcontent"><span class="heading3" id="s4.3.5">DELETE NOTICE</span></a>
+</li>
+<li class="heading3" id="i4.3.6" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.6" href="sendmessage.html" target="hmcontent"><span class="heading3" id="s4.3.6">SEND MESSAGE</span></a>
+</li>
+<li class="heading3" id="i4.3.7" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.7" href="toc52908684.html" target="hmcontent"><span class="heading3" id="s4.3.7">Topic 34</span></a>
+</li>
+<li class="heading3" id="i4.3.8" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.8" href="adminnavbar.html" target="hmcontent"><span class="heading3" id="s4.3.8">ADMIN NAVBAR</span></a>
+</li>
+<li class="heading3" id="i4.3.9" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.9" href="toc52908685.html" target="hmcontent"><span class="heading3" id="s4.3.9">VIEW EVENT INFORMATION ON CALENDAR</span></a>
+</li>
+<li class="heading3" id="i4.3.10" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.10" href="toc52908686.html" target="hmcontent"><span class="heading3" id="s4.3.10">VIEW FAMILY ACCOUNT</span></a>
+</li>
+<li class="heading3" id="i4.3.11" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.11" href="toc52908687.html" target="hmcontent"><span class="heading3" id="s4.3.11">UPDATE FAMILY ACCOUNT</span></a>
+</li>
+<li class="heading3" id="i4.3.12" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.12" href="toc52908688.html" target="hmcontent"><span class="heading3" id="s4.3.12">DELETE FAMILY ACCOUNT</span></a>
+</li>
+<li class="heading3" id="i4.3.13" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.13" href="toc52908689.html" target="hmcontent"><span class="heading3" id="s4.3.13">VIEW EMPLOYEE DETAILS</span></a>
+</li>
+<li class="heading3" id="i4.3.14" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.14" href="toc52908690.html" target="hmcontent"><span class="heading3" id="s4.3.14">REGISTER EMPLOYEE</span></a>
+</li>
+<li class="heading3" id="i4.3.15" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.15" href="updateemployeedetails.html" target="hmcontent"><span class="heading3" id="s4.3.15">UPDATE EMPLOYEE DETAILS</span></a>
+</li>
+<li class="heading3" id="i4.3.16" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.16" href="toc52908692.html" target="hmcontent"><span class="heading3" id="s4.3.16">ALLOCATE EMPLOYEE DUTIES</span></a>
+</li>
+<li class="heading3" id="i4.3.17" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.17" href="toc52908693.html" target="hmcontent"><span class="heading3" id="s4.3.17">DELETE EMPLOYEE</span></a>
+</li>
+<li class="heading3" id="i4.3.18" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.18" href="viewapplications.html" target="hmcontent"><span class="heading3" id="s4.3.18">VIEW APPLICATIONS</span></a>
+</li>
+<li class="heading3" id="i4.3.19" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.19" href="acceptrejectapplications.html" target="hmcontent"><span class="heading3" id="s4.3.19">ACCEPT/REJECT APPLICATIONS</span></a>
+</li>
+<li class="heading3" id="i4.3.20" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.20" href="toc52908696.html" target="hmcontent"><span class="heading3" id="s4.3.20">VIEW WAITING LIST</span></a>
+</li>
+<li class="heading3" id="i4.3.21" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.21" href="toc52908697.html" target="hmcontent"><span class="heading3" id="s4.3.21">VIEW MEAL PLAN</span></a>
+</li>
+<li class="heading3" id="i4.3.22" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.22" href="toc52908698.html" target="hmcontent"><span class="heading3" id="s4.3.22">ADD MEAL PLAN</span></a>
+</li>
+<li class="heading3" id="i4.3.23" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.23" href="updatemealplan.html" target="hmcontent"><span class="heading3" id="s4.3.23">UPDATE MEAL PLAN</span></a>
+</li>
+<li class="heading3" id="i4.3.24" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.24" href="deletemealplan.html" target="hmcontent"><span class="heading3" id="s4.3.24">DELETE MEAL PLAN</span></a>
+</li>
+<li class="heading3" id="i4.3.25" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.25" href="viewschoolfeepackagedetails.html" target="hmcontent"><span class="heading3" id="s4.3.25">VIEW SCHOOL FEE PACKAGE DETAILS</span></a>
+</li>
+<li class="heading3" id="i4.3.26" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.26" href="toc52908702.html" target="hmcontent"><span class="heading3" id="s4.3.26">ADD SCHOOL FEE PACKAGE</span></a>
+</li>
+<li class="heading3" id="i4.3.27" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.27" href="toc46741310.html" target="hmcontent"><span class="heading3" id="s4.3.27">UPLOAD DOCUMENT</span></a>
+</li>
+<li class="heading3" id="i4.3.28" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.28" href="viewdocument.html" target="hmcontent"><span class="heading3" id="s4.3.28">VIEW DOCUMENT</span></a>
+</li>
+<li class="heading3" id="i4.3.29" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.29" href="adddcoumenttype.html" target="hmcontent"><span class="heading3" id="s4.3.29">ADD DCOUMENT TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.30" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.30" href="addemployeetype.html" target="hmcontent"><span class="heading3" id="s4.3.30">ADD EMPLOYEE TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.31" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.31" href="viewemployeetype.html" target="hmcontent"><span class="heading3" id="s4.3.31">VIEW EMPLOYEE TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.32" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.32" href="updateemployeetype.html" target="hmcontent"><span class="heading3" id="s4.3.32">UPDATE EMPLOYEE TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.33" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.33" href="addclass.html" target="hmcontent"><span class="heading3" id="s4.3.33">ADD CLASS</span></a>
+</li>
+<li class="heading3" id="i4.3.34" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.34" href="viewclass.html" target="hmcontent"><span class="heading3" id="s4.3.34">VIEW CLASS</span></a>
+</li>
+<li class="heading3" id="i4.3.35" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.35" href="updateclass.html" target="hmcontent"><span class="heading3" id="s4.3.35">UPDATE CLASS</span></a>
+</li>
+<li class="heading3" id="i4.3.36" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.36" href="addclassgrade.html" target="hmcontent"><span class="heading3" id="s4.3.36">ADD CLASS GRADE</span></a>
+</li>
+<li class="heading3" id="i4.3.37" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.37" href="viewclassgrade.html" target="hmcontent"><span class="heading3" id="s4.3.37">VIEW CLASS GRADE</span></a>
+</li>
+<li class="heading3" id="i4.3.38" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.38" href="updateclassgrade.html" target="hmcontent"><span class="heading3" id="s4.3.38">UPDATE CLASS GRADE</span></a>
+</li>
+<li class="heading3" id="i4.3.39" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.39" href="addextra-mural.html" target="hmcontent"><span class="heading3" id="s4.3.39">ADD EXTRA-MURAL</span></a>
+</li>
+<li class="heading3" id="i4.3.40" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.40" href="viewextra-mural.html" target="hmcontent"><span class="heading3" id="s4.3.40">VIEW EXTRA-MURAL</span></a>
+</li>
+<li class="heading3" id="i4.3.41" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.41" href="updateextra-mural.html" target="hmcontent"><span class="heading3" id="s4.3.41">UPDATE EXTRA-MURAL</span></a>
+</li>
+<li class="heading3" id="i4.3.42" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.42" href="addprogressreporttype.html" target="hmcontent"><span class="heading3" id="s4.3.42">ADD PROGRESS REPORT TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.43" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.43" href="updateprogressreporttype.html" target="hmcontent"><span class="heading3" id="s4.3.43">UPDATE PROGRESS REPORT TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.44" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.44" href="addprogressreporttestcategory.html" target="hmcontent"><span class="heading3" id="s4.3.44">ADD PROGRESS REPORT TEST CATEGORY</span></a>
+</li>
+<li class="heading3" id="i4.3.45" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.45" href="addnewassessmentcriteria.html" target="hmcontent"><span class="heading3" id="s4.3.45">ADD NEW ASSESSMENT CRITERIA</span></a>
+</li>
+<li class="heading3" id="i4.3.46" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.46" href="updateassessmentcriteria.html" target="hmcontent"><span class="heading3" id="s4.3.46">UPDATE ASSESSMENT CRITERIA</span></a>
+</li>
+<li class="heading3" id="i4.3.47" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.47" href="viewprogressreporttestcategory.html" target="hmcontent"><span class="heading3" id="s4.3.47">VIEW PROGRESS REPORT TEST CATEGORY</span></a>
+</li>
+<li class="heading3" id="i4.3.48" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.48" href="updateprogressreporttestcategory.html" target="hmcontent"><span class="heading3" id="s4.3.48">UPDATE PROGRESS REPORT TEST CATEGORY</span></a>
+</li>
+<li class="heading3" id="i4.3.49" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.49" href="addfooditem.html" target="hmcontent"><span class="heading3" id="s4.3.49">ADD FOOD ITEM</span></a>
+</li>
+<li class="heading3" id="i4.3.50" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.50" href="addnewfoodcategory.html" target="hmcontent"><span class="heading3" id="s4.3.50">ADD NEW FOOD CATEGORY</span></a>
+</li>
+<li class="heading3" id="i4.3.51" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.51" href="viewfooditemdetails.html" target="hmcontent"><span class="heading3" id="s4.3.51">VIEW FOOD ITEM DETAILS</span></a>
+</li>
+<li class="heading3" id="i4.3.52" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.52" href="updatefooditemdetails.html" target="hmcontent"><span class="heading3" id="s4.3.52">UPDATE FOOD ITEM DETAILS</span></a>
+</li>
+<li class="heading3" id="i4.3.53" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.53" href="addusertype.html" target="hmcontent"><span class="heading3" id="s4.3.53">ADD USER TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.54" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.54" href="viewusertype.html" target="hmcontent"><span class="heading3" id="s4.3.54">VIEW USER TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.55" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.55" href="updateusertype.html" target="hmcontent"><span class="heading3" id="s4.3.55">UPDATE USER TYPE</span></a>
+</li>
+<li class="heading3" id="i4.3.56" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.56" href="addduty.html" target="hmcontent"><span class="heading3" id="s4.3.56">ADD DUTY</span></a>
+</li>
+<li class="heading3" id="i4.3.57" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.57" href="viewduties.html" target="hmcontent"><span class="heading3" id="s4.3.57">VIEW DUTIES</span></a>
+</li>
+<li class="heading3" id="i4.3.58" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.58" href="updateduty.html" target="hmcontent"><span class="heading3" id="s4.3.58">UPDATE DUTY</span></a>
+</li>
+<li class="heading3" id="i4.3.59" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.59" href="createextramuralcompany.html" target="hmcontent"><span class="heading3" id="s4.3.59">CREATE EXTRAMURAL COMPANY</span></a>
+</li>
+<li class="heading3" id="i4.3.60" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.60" href="updateextramuralcompany.html" target="hmcontent"><span class="heading3" id="s4.3.60">UPDATE EXTRAMURAL COMPANY</span></a>
+</li>
+<li class="heading3" id="i4.3.61" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.61" href="viewextramuralcompany.html" target="hmcontent"><span class="heading3" id="s4.3.61">VIEW EXTRAMURAL COMPANY</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.4" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="toc52908703.html" target="hmcontent"><span class="heading2" id="s4.4" ondblclick="return dblclicked(this)">REPORTS</span></a>
+<ul id="ul4.4" style="list-style-type:none">
+<li class="heading3" id="i4.4.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.1" href="toc52908704.html" target="hmcontent"><span class="heading3" id="s4.4.1">GENERATE EMPLOYEE LIST REPORT</span></a>
+</li>
+<li class="heading3" id="i4.4.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.2" href="generateclasslist.html" target="hmcontent"><span class="heading3" id="s4.4.2">GENERATE CLASS LIST</span></a>
+</li>
+<li class="heading3" id="i4.4.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.3" href="toc52908706.html" target="hmcontent"><span class="heading3" id="s4.4.3">GENERATE EXTRA-MURAL ACTIVITY LIST REPORT</span></a>
+</li>
+<li class="heading3" id="i4.4.4" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.4" href="toc52908707.html" target="hmcontent"><span class="heading3" id="s4.4.4">GENERATE EVENTS LIST REPORT</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.5" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="toc52908708.html" target="hmcontent"><span class="heading2" id="s4.5" ondblclick="return dblclicked(this)">PARENT SECTION</span></a>
+<ul id="ul4.5" style="list-style-type:none">
+<li class="heading3" id="i4.5.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.1" href="parentnavbar.html" target="hmcontent"><span class="heading3" id="s4.5.1">PARENT NAVBAR</span></a>
+</li>
+<li class="heading3" id="i4.5.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.2" href="applytoregister.html" target="hmcontent"><span class="heading3" id="s4.5.2">APPLY TO REGISTER</span></a>
+</li>
+<li class="heading3" id="i4.5.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.3" href="updateparentpupildetails.html" target="hmcontent"><span class="heading3" id="s4.5.3">UPDATE PARENT &amp; PUPIL DETAILS</span></a>
+</li>
+<li class="heading3" id="i4.5.4" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.4" href="viewpupilprogressreport.html" target="hmcontent"><span class="heading3" id="s4.5.4">VIEW PUPIL PROGRESS REPORT</span></a>
+</li>
+<li class="heading3" id="i4.5.5" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.5" href="acceptrejectpupilprogresstothenextgrade.html" target="hmcontent"><span class="heading3" id="s4.5.5">ACCEPT/REJECT PUPIL PROGRESS TO THE NEXT GRADE</span></a>
+</li>
+<li class="heading3" id="i4.5.6" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.6" href="assignpupiltoextra-muralactivity.html" target="hmcontent"><span class="heading3" id="s4.5.6">ASSIGN PUPIL TO EXTRA-MURAL ACTIVITY</span></a>
+</li>
+<li class="heading3" id="i4.5.7" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.7" href="toc52908709.html" target="hmcontent"><span class="heading3" id="s4.5.7">RESPOND TO EVENT</span></a>
+</li>
+<li class="heading3" id="i4.5.8" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.8" href="monthlystatement.html" target="hmcontent"><span class="heading3" id="s4.5.8">MONTHLY STATEMENT</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.6" data-bg="icon-book.png;icon-bookopen.png" style="background:url(icon-bookopen.png) no-repeat;cursor:pointer;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.6" href="toc52908710.html" target="hmcontent"><span class="heading2" id="s4.6" ondblclick="return dblclicked(this)">TEACHER SECTION (DESKTOP APPLICATION</span></a>
+<ul id="ul4.6" style="list-style-type:none">
+<li class="heading3" id="i4.6.1" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.1" href="toc52908711.html" target="hmcontent"><span class="heading3" id="s4.6.1">TEACHER NAVBAR</span></a>
+</li>
+<li class="heading3" id="i4.6.2" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.2" href="captureprogressreports.html" target="hmcontent"><span class="heading3" id="s4.6.2">CAPTURE PROGRESS REPORTS</span></a>
+</li>
+<li class="heading3" id="i4.6.3" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.3" href="viewprogressreports.html" target="hmcontent"><span class="heading3" id="s4.6.3">VIEW PROGRESS REPORTS</span></a>
+</li>
+<li class="heading3" id="i4.6.4" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.4" href="updateprogressreports.html" target="hmcontent"><span class="heading3" id="s4.6.4">UPDATE PROGRESS REPORTS</span></a>
+</li>
+<li class="heading3" id="i4.6.5" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.5" href="toc52908715.html" target="hmcontent"><span class="heading3" id="s4.6.5">CAPTURE PUPIL ABSENCE</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.7" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.7" href="toc52908716.html" target="hmcontent"><span class="heading2" id="s4.7">ERROR MESSAGES &amp; OTHER POP-UPS</span></a>
+</li>
+<li class="heading2" id="i4.8" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading2" id="a4.8" href="toc52908717.html" target="hmcontent"><span class="heading2" id="s4.8">5.7 CONCLUSION</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="toc52908718.html" target="hmcontent"><span class="heading1" id="s5">CONCLUSION</span></a>
+</li>
+<li class="heading1" id="i6" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="glossary.html" target="hmcontent"><span class="heading1" id="s6">GLOSSARY</span></a>
+</li>
+<li class="heading1" id="i7" style="background:url(icon-page.png) no-repeat;padding-left:24px" onclick="return clicked(this,event)"><a class="heading1" id="a7" href="idh_1.html" target="hmcontent"><span class="heading1" id="s7">A</span></a>
+</li>
+</ul>
+<script type="text/javascript">loadicons('icon-bookopen.png','icon-book.png','icon-page.png');</script>
+</body>
+</html>
